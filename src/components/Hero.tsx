@@ -89,7 +89,7 @@ const Hero = () => {
                 <img
                   src={profilePhoto}
                   alt="Md. Rezaur Rahman Rasul"
-                  className="w-full h-full object-cover object-[center_15%]"
+                  className="w-full h-full object-contain object-top bg-background"
                 />
               </div>
 
