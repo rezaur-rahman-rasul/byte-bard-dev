@@ -89,7 +89,7 @@ const Hero = () => {
                 <img
                   src={profilePhoto}
                   alt="Md. Rezaur Rahman Rasul"
-                  className="w-full h-full object-cover object-[center_5%]"
+                  className="w-full h-full object-cover object-[center_50%]"
                 />
               </div>
 
