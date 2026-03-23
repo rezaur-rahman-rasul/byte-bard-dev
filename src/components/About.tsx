@@ -11,7 +11,7 @@ const About = () => {
     {
       company: 'Walton',
       position: 'Software Developer',
-      period: 'Previous',
+      period: 'Present',
       description: 'Angular + Spring Boot + Groovy on Grails development',
     },
     {
