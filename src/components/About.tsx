@@ -2,12 +2,12 @@ import { Briefcase, GraduationCap, Code2, Target } from 'lucide-react';
 
 const About = () => {
   const experiences = [
-    {
-      company: 'Current Role',
-      position: 'Full Stack Java Developer',
-      period: 'Present',
-      description: 'Building scalable Angular-Spring Boot enterprise applications',
-    },
+    // {
+    //   company: 'Current Role',
+    //   position: 'Full Stack Java Developer',
+    //   period: 'Present',
+    //   description: 'Building scalable Angular-Spring Boot enterprise applications',
+    // },
     {
       company: 'Walton',
       position: 'Software Developer',
