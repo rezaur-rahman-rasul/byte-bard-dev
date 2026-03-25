@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import SignatureLogo from './SignatureLogo';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,9 +33,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="text-xl font-bold text-gradient">
-            RRR
-          </a>
+          <SignatureLogo />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
