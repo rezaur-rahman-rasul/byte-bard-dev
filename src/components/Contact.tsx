@@ -46,7 +46,7 @@ const Contact = () => {
     <section id="contact" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 via-transparent to-transparent" />
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm">// GET IN TOUCH</span>
           <h2 className="section-title mt-2">
@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground block">{info.label}</span>
-                    <span className="font-medium group-hover:text-primary transition-colors">{info.value}</span>
+                    <span className="font-medium group-hover:text-primary transition-colors text-sm sm:text-base break-all sm:break-normal">{info.value}</span>
                   </div>
                   <ArrowRight size={18} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </a>
@@ -89,7 +89,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-2xl bg-card border border-border/50">
+          <div className="p-5 sm:p-8 rounded-2xl bg-card border border-border/50">
             <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

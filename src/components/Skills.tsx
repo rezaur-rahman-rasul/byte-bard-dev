@@ -69,7 +69,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 relative" ref={sectionRef}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm">// SKILLS & EXPERTISE</span>
           <h2 className="section-title mt-2">
@@ -81,7 +81,7 @@ const Skills = () => {
         </div>
 
         {/* Skill Categories with Progress Bars */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
           {skillCategories.map((category, catIndex) => (
             <div
               key={catIndex}
