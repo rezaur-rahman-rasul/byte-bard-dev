@@ -49,7 +49,7 @@ const Hero = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center justify-center lg:justify-start gap-4">
               <span className="text-sm text-muted-foreground">Find me on</span>
               <div className="flex gap-3">
                 <a
