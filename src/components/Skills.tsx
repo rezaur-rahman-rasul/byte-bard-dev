@@ -69,7 +69,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-24 relative" ref={sectionRef}>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <span className="text-primary font-mono text-sm">// SKILLS & EXPERTISE</span>
           <h2 className="section-title mt-2">
