@@ -3,55 +3,45 @@ import { useEffect, useState } from 'react';
 const SignatureLogo = () => {
   const text = "Rezaur Rahman Rasul";
   const [visibleCount, setVisibleCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (hasAnimated) return;
-    
-    const interval = setInterval(() => {
-      setVisibleCount((prev) => {
-        if (prev >= text.length) {
-          clearInterval(interval);
-          setHasAnimated(true);
-          return prev;
-        }
-        return prev + 1;
-      });
+    if (visibleCount >= text.length) return;
+
+    const timeout = setTimeout(() => {
+      setVisibleCount((prev) => prev + 1);
     }, 80);
 
-    return () => clearInterval(interval);
-  }, [hasAnimated]);
+    return () => clearTimeout(timeout);
+  }, [visibleCount, text.length]);
 
   return (
-    <a href="#home" className="block relative overflow-hidden">
+    <a href="#home" className="block relative">
       <span
-        className="text-xl md:text-2xl text-gradient whitespace-nowrap"
+        className="text-xl md:text-2xl text-gradient font-bold whitespace-nowrap"
         style={{
-          fontFamily: "'Dancing Script', cursive",
-          fontWeight: 700,
+          fontFamily: "'Dancing Script', 'Georgia', cursive",
           letterSpacing: '0.02em',
         }}
       >
         {text.split('').map((char, i) => (
           <span
             key={i}
-            className="inline-block transition-all duration-300"
             style={{
               opacity: i < visibleCount ? 1 : 0,
+              display: 'inline-block',
+              transition: 'opacity 0.3s ease, transform 0.3s ease',
               transform: i < visibleCount ? 'translateY(0)' : 'translateY(8px)',
-              transitionDelay: `${i * 20}ms`,
             }}
           >
             {char === ' ' ? '\u00A0' : char}
           </span>
         ))}
       </span>
-      {/* Signature underline */}
       <span
-        className="absolute bottom-0 left-0 h-[1.5px] bg-primary transition-all duration-700 ease-out"
+        className="absolute bottom-0 left-0 h-[1.5px] bg-primary"
         style={{
           width: visibleCount >= text.length ? '100%' : '0%',
-          transitionDelay: '200ms',
+          transition: 'width 0.7s ease-out 0.2s',
         }}
       />
     </a>
