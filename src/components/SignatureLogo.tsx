@@ -23,7 +23,7 @@ const SignatureLogo = () => {
       <span
         className="text-xl md:text-2xl text-primary font-bold whitespace-nowrap"
         style={{
-          fontFamily: "'Ballet', 'Georgia', cursive",
+          fontFamily: "'Monsieur La Doulaise', 'Georgia', cursive",
           letterSpacing: '0.02em',
         }}
       >
