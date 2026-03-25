@@ -89,7 +89,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="p-8 rounded-2xl bg-card border border-border/50">
+          <div className="p-5 sm:p-8 rounded-2xl bg-card border border-border/50">
             <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
