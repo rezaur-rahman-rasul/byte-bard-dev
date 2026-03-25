@@ -85,7 +85,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl scale-110" />
               
               {/* Image container */}
-              <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary/30 glow-effect">
+              <div className="relative w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary/30 glow-effect">
                 <img
                   src={profilePhoto}
                   alt="Md. Rezaur Rahman Rasul"
@@ -94,11 +94,11 @@ const Hero = () => {
               </div>
 
               {/* Floating badges */}
-              <div className="absolute -right-4 top-1/4 px-4 py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float">
-                <span className="text-sm font-mono text-primary">4+ Years</span>
+              <div className="absolute right-0 sm:-right-4 top-1/4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float">
+                <span className="text-xs sm:text-sm font-mono text-primary">4+ Years</span>
               </div>
-              <div className="absolute -left-4 bottom-1/4 px-4 py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-sm font-mono text-accent">Java Expert</span>
+              <div className="absolute left-0 sm:-left-4 bottom-1/4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
+                <span className="text-xs sm:text-sm font-mono text-accent">Java Expert</span>
               </div>
             </div>
           </div>
