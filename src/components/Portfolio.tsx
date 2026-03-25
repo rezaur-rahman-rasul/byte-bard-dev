@@ -24,11 +24,11 @@ const Portfolio = () => {
       features: ['Tax Calculation', 'Report Generation', 'Compliance Tracking', 'Invoice Management'],
     },
     {
-      title: 'E-Commerce Platform',
-      category: 'Web Application',
-      description: 'Full-featured e-commerce solution with product management, cart functionality, and payment integration.',
-      technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Redis'],
-      features: ['Product Catalog', 'Shopping Cart', 'Order Management', 'Payment Gateway'],
+      title: 'Human Resource Management System',
+      category: 'Enterprise Application',
+      description: 'Complete HR management platform for employee records, payroll processing, attendance tracking, and performance evaluation.',
+      technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
+      features: ['Employee Management', 'Payroll Processing', 'Attendance Tracking', 'Performance Reviews'],
     },
     {
       title: 'Chemical Management System',
