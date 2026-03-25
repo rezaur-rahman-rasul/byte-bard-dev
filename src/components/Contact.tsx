@@ -80,7 +80,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <span className="text-sm text-muted-foreground block">{info.label}</span>
-                    <span className="font-medium group-hover:text-primary transition-colors">{info.value}</span>
+                    <span className="font-medium group-hover:text-primary transition-colors text-sm sm:text-base break-all sm:break-normal">{info.value}</span>
                   </div>
                   <ArrowRight size={18} className="ml-auto text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </a>
