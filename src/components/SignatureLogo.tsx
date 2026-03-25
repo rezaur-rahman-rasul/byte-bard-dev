@@ -5,13 +5,17 @@ const SignatureLogo = () => {
   const [visibleCount, setVisibleCount] = useState(0);
 
   useEffect(() => {
-    if (visibleCount >= text.length) return;
+    if (visibleCount < text.length) {
+      const timeout = setTimeout(() => {
+        setVisibleCount((prev) => prev + 1);
+      }, 80);
+      return () => clearTimeout(timeout);
+    }
 
-    const timeout = setTimeout(() => {
-      setVisibleCount((prev) => prev + 1);
-    }, 80);
-
-    return () => clearTimeout(timeout);
+    const restart = setTimeout(() => {
+      setVisibleCount(0);
+    }, 30000);
+    return () => clearTimeout(restart);
   }, [visibleCount, text.length]);
 
   return (
