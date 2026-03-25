@@ -17,7 +17,7 @@ const SignatureLogo = () => {
   return (
     <a href="#home" className="block relative">
       <span
-        className="text-xl md:text-2xl text-gradient font-bold whitespace-nowrap"
+        className="text-xl md:text-2xl text-primary font-bold whitespace-nowrap"
         style={{
           fontFamily: "'Dancing Script', 'Georgia', cursive",
           letterSpacing: '0.02em',
