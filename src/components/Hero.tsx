@@ -9,25 +9,25 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Content */}
-          <div className="order-2 lg:order-1">
+          <div className="order-2 lg:order-1 text-center lg:text-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
               <span className="text-sm text-primary font-medium">Available for opportunities</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
               Hello! I'm{' '}
               <span className="text-gradient">Reza</span>
             </h1>
             
-            <h2 className="text-xl md:text-2xl text-muted-foreground mb-6 font-mono">
+            <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 font-mono">
               Full Stack Java Developer
             </h2>
             
-            <p className="text-muted-foreground text-lg leading-relaxed mb-8 max-w-xl">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
               Specializing in scalable enterprise applications with{' '}
               <span className="text-foreground font-medium">Angular</span>,{' '}
               <span className="text-foreground font-medium">Spring Boot</span>,{' '}
@@ -37,12 +37,12 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8">
-              <a href="#portfolio" className="btn-primary">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8">
+              <a href="#portfolio" className="btn-primary text-sm sm:text-base">
                 View Portfolio
                 <ArrowRight size={18} />
               </a>
-              <a href="#contact" className="btn-outline">
+              <a href="#contact" className="btn-outline text-sm sm:text-base">
                 Contact Me
                 <Mail size={18} />
               </a>
