@@ -46,6 +46,14 @@ const Hero = () => {
                 Contact Me
                 <Mail size={18} />
               </a>
+              <a
+                href="/Rezaur_Rahman_Resume_Updated.pdf"
+                download
+                className="btn-outline text-sm sm:text-base"
+              >
+                Download Resume
+                <Download size={18} />
+              </a>
             </div>
 
             {/* Social Links */}
