@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Send, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Github, Send, ArrowRight, Code } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,6 +39,12 @@ const Contact = () => {
       label: 'GitHub',
       value: 'rezaur-rahman-rasul',
       href: 'https://github.com/rezaur-rahman-rasul',
+    },
+    {
+      icon: Code,
+      label: 'LeetCode',
+      value: 'russellruosuull',
+      href: 'https://leetcode.com/u/russellruosuull/',
     },
   ];
 

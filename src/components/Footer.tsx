@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail, Heart } from 'lucide-react';
+import { Linkedin, Github, Mail, Heart, Code } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -36,6 +36,14 @@ const Footer = () => {
               className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
             >
               <Mail size={18} />
+            </a>
+            <a
+              href="https://leetcode.com/u/russellruosuull/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+            >
+              <Code size={18} />
             </a>
           </div>
 

@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
@@ -81,6 +81,14 @@ const Hero = () => {
                   className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
                 >
                   <Mail size={18} />
+                </a>
+                <a
+                  href="https://leetcode.com/u/russellruosuull/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
+                >
+                  <Code size={18} />
                 </a>
               </div>
             </div>
