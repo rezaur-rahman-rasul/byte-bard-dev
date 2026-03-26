@@ -1,4 +1,4 @@
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
