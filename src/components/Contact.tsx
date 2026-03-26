@@ -40,6 +40,12 @@ const Contact = () => {
       value: 'rezaur-rahman-rasul',
       href: 'https://github.com/rezaur-rahman-rasul',
     },
+    {
+      icon: Code,
+      label: 'LeetCode',
+      value: 'russellruosuull',
+      href: 'https://leetcode.com/u/russellruosuull/',
+    },
   ];
 
   return (
