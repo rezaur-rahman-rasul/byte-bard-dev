@@ -116,9 +116,6 @@ const Hero = () => {
               <div className="absolute left-0 sm:-left-4 bottom-1/4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
                 <span className="text-xs sm:text-sm font-mono text-accent">Java Expert</span>
               </div>
-              <div className="absolute left-1/2 -translate-x-1/2 -bottom-4 sm:-bottom-6 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float" style={{ animationDelay: '2s' }}>
-                <span className="text-xs sm:text-sm font-mono text-primary">DevOps Practitioner</span>
-              </div>
             </div>
           </div>
         </div>
