@@ -125,7 +125,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-8 overflow-x-auto scrollbar-hide">
             <span className="text-sm text-muted-foreground whitespace-nowrap">Tech Stack:</span>
             <div className="flex gap-3 sm:gap-6 animate-pulse-slow overflow-x-auto scrollbar-hide pb-2 sm:pb-0">
-              {['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Microservices', 'REST APIs', 'Docker'].map((tech) => (
+              {['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Microservices', 'Microfrontend', 'REST APIs', 'Docker'].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-secondary/50 border border-border/50 text-xs sm:text-sm font-medium text-muted-foreground whitespace-nowrap"
