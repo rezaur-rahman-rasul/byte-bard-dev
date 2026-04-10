@@ -47,7 +47,7 @@ const Skills = () => {
     },
     {
       icon: Database,
-      title: 'Database & Tools',
+      title: 'Database & DevOps',
       color: 'primary',
       skills: [
         { name: 'PostgreSQL', level: 90 },
@@ -68,30 +68,30 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-24 relative" ref={sectionRef}>
+    <section id="skills" className="py-28 relative" ref={sectionRef}>
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm">// SKILLS & EXPERTISE</span>
-          <h2 className="section-title mt-2">
-            Technical <span className="text-gradient">Proficiency</span>
+        <div className="text-center mb-20">
+          <span className="text-primary font-mono text-sm tracking-wider uppercase">Skills & Expertise</span>
+          <h2 className="section-title mt-3">
+            Battle-Tested <span className="text-gradient">Technologies</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            Comprehensive skill set in full-stack development with a strong focus on enterprise Java applications
+            Skills honed through building production-grade enterprise systems — not just tutorials
           </p>
         </div>
 
         {/* Skill Categories with Progress Bars */}
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
           {skillCategories.map((category, catIndex) => (
             <div
               key={catIndex}
-              className="p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300"
+              className="p-6 rounded-2xl bg-card border border-border/30 hover:border-primary/30 transition-all duration-500 border-glow"
             >
               <div className="flex items-center gap-3 mb-6">
                 <div className={`w-12 h-12 rounded-xl bg-${category.color}/10 flex items-center justify-center`}>
                   <category.icon className={`text-${category.color}`} size={24} />
                 </div>
-                <h3 className="font-semibold text-lg">{category.title}</h3>
+                <h3 className="font-bold text-lg font-display">{category.title}</h3>
               </div>
 
               <div className="space-y-4">
@@ -119,12 +119,12 @@ const Skills = () => {
 
         {/* Technology Tags */}
         <div className="text-center">
-          <h3 className="text-xl font-semibold mb-6">Technologies & Tools</h3>
+          <h3 className="text-xl font-bold mb-8 font-display">Full Technology Arsenal</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {technologies.map((tech, index) => (
               <span
                 key={index}
-                className="px-4 py-2 rounded-lg bg-secondary/50 border border-border/50 text-sm font-medium text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
+                className="px-4 py-2.5 rounded-xl bg-secondary/40 border border-border/30 text-sm font-medium text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
               >
                 {tech}
               </span>
