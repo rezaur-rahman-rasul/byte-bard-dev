@@ -1,107 +1,135 @@
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, TrendingUp, Layers } from 'lucide-react';
 
 const Portfolio = () => {
   const projects = [
     {
-      title: 'ERP System - Furniture Production',
-      category: 'Enterprise Application',
-      description: 'Comprehensive ERP solution for managing furniture production workflows, inventory, and supply chain operations.',
+      title: 'ERP System — Furniture Production',
+      category: 'Enterprise ERP',
+      problem: 'A furniture manufacturer struggled with disconnected production workflows, manual inventory tracking, and delayed order fulfillment.',
+      solution: 'Built a comprehensive ERP platform that digitized the entire production lifecycle — from raw material procurement to finished goods delivery.',
       technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
-      features: ['Production Planning', 'Inventory Management', 'Order Processing', 'Reporting Dashboard'],
+      impact: ['Streamlined production planning across multiple units', 'Reduced manual inventory errors', 'Real-time order tracking & reporting dashboard'],
+      featured: true,
     },
     {
-      title: 'ERP System - Animal Feed Production',
-      category: 'Enterprise Application',
-      description: 'End-to-end ERP platform for animal feed manufacturing companies with batch processing and quality control.',
+      title: 'ERP System — Animal Feed Production',
+      category: 'Enterprise ERP',
+      problem: 'An animal feed manufacturer needed end-to-end visibility into batch production, quality control, and sales operations.',
+      solution: 'Developed a microservices-based ERP handling batch management, automated quality checks, and integrated sales analytics.',
       technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Microservices'],
-      features: ['Batch Management', 'Quality Control', 'Sales Tracking', 'Production Analytics'],
+      impact: ['Automated batch tracking & quality control workflows', 'Integrated sales & production analytics', 'Scalable architecture supporting business growth'],
+      featured: true,
     },
     {
       title: 'VAT Management System',
       category: 'Financial Software',
-      description: 'Automated VAT calculation and reporting system ensuring compliance with local tax regulations.',
+      problem: 'Businesses faced compliance risks due to manual VAT calculations and fragmented reporting across departments.',
+      solution: 'Created an automated VAT calculation and reporting engine ensuring full compliance with local tax regulations.',
       technologies: ['Java', 'Spring Boot', 'Angular', 'MySQL', 'REST API'],
-      features: ['Tax Calculation', 'Report Generation', 'Compliance Tracking', 'Invoice Management'],
+      impact: ['Eliminated manual tax calculation errors', 'Automated compliant report generation', 'Centralized invoice & tax management'],
     },
     {
       title: 'Human Resource Management System',
-      category: 'Enterprise Application',
-      description: 'Complete HR management platform for employee records, payroll processing, attendance tracking, and performance evaluation.',
+      category: 'Enterprise HR',
+      problem: 'HR teams managed employee data, payroll, and attendance across disconnected spreadsheets and legacy tools.',
+      solution: 'Built a unified HR platform covering the full employee lifecycle — from onboarding to performance reviews.',
       technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
-      features: ['Employee Management', 'Payroll Processing', 'Attendance Tracking', 'Performance Reviews'],
+      impact: ['Unified employee data management', 'Automated payroll & attendance tracking', 'Data-driven performance evaluation'],
     },
     {
       title: 'Chemical Management System',
       category: 'Industry Solution',
-      description: 'Specialized system for tracking chemical inventory, safety compliance, and usage documentation.',
+      problem: 'A chemical facility lacked proper tracking of hazardous materials, risking safety violations and audit failures.',
+      solution: 'Developed a specialized tracking system for chemical inventory, safety compliance documentation, and automated alerts.',
       technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Docker'],
-      features: ['Inventory Tracking', 'Safety Compliance', 'Usage Reports', 'Alerts System'],
+      impact: ['Full regulatory compliance tracking', 'Proactive safety alert system', 'Complete audit trail for inspections'],
     },
   ];
 
   return (
-    <section id="portfolio" className="py-24 relative">
+    <section id="portfolio" className="py-28 relative">
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="text-center mb-16">
-          <span className="text-primary font-mono text-sm">// PORTFOLIO</span>
-          <h2 className="section-title mt-2">
-            Featured <span className="text-gradient">Projects</span>
+        <div className="text-center mb-20">
+          <span className="text-primary font-mono text-sm tracking-wider uppercase">Portfolio</span>
+          <h2 className="section-title mt-3">
+            Real Problems.<br />
+            <span className="text-gradient">Real Solutions.</span>
           </h2>
           <p className="section-subtitle mx-auto mt-4">
-            A showcase of enterprise applications I've built, demonstrating my expertise in full-stack development
+            Enterprise systems I've built that power real businesses — each solving specific challenges with measurable impact
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card group"
+              className={`project-card group ${project.featured ? 'border-glow' : ''}`}
             >
-              {/* Project Header */}
-              <div className="p-6 pb-4">
-                <div className="flex items-start justify-between mb-4">
-                  <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    {project.category}
-                  </span>
-                  <ArrowUpRight 
-                    size={20} 
-                    className="text-muted-foreground group-hover:text-primary transition-colors" 
-                  />
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                
-                <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
+              <div className="p-6 sm:p-8">
+                <div className="flex flex-col lg:flex-row lg:items-start gap-6 lg:gap-10">
+                  {/* Left: Problem & Solution */}
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-4">
+                      <span className="text-xs font-mono text-primary bg-primary/10 px-3 py-1.5 rounded-lg uppercase tracking-wider">
+                        {project.category}
+                      </span>
+                      {project.featured && (
+                        <span className="text-xs font-mono text-accent bg-accent/10 px-3 py-1.5 rounded-lg">
+                          Featured
+                        </span>
+                      )}
+                    </div>
+                    
+                    <h3 className="text-xl sm:text-2xl font-bold mb-4 font-display group-hover:text-primary transition-colors">
+                      {project.title}
+                    </h3>
 
-                {/* Features */}
-                <div className="flex flex-wrap gap-1 mb-4">
-                  {project.features.map((feature, featureIndex) => (
-                    <span
-                      key={featureIndex}
-                      className="text-xs text-muted-foreground"
-                    >
-                      {feature}{featureIndex < project.features.length - 1 && ' • '}
-                    </span>
-                  ))}
-                </div>
-              </div>
+                    <div className="space-y-4 mb-6">
+                      <div>
+                        <span className="text-xs font-mono text-muted-foreground uppercase tracking-wider">The Problem</span>
+                        <p className="text-muted-foreground text-sm leading-relaxed mt-1">
+                          {project.problem}
+                        </p>
+                      </div>
+                      <div>
+                        <span className="text-xs font-mono text-primary uppercase tracking-wider">My Solution</span>
+                        <p className="text-muted-foreground text-sm leading-relaxed mt-1">
+                          {project.solution}
+                        </p>
+                      </div>
+                    </div>
 
-              {/* Technologies */}
-              <div className="px-6 pb-6 pt-4 border-t border-border/50">
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-3 py-1 text-xs font-mono rounded-md bg-secondary/50 text-muted-foreground"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.map((tech, techIndex) => (
+                        <span
+                          key={techIndex}
+                          className="px-3 py-1.5 text-xs font-mono rounded-lg bg-secondary/50 text-muted-foreground border border-border/30"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right: Impact */}
+                  <div className="lg:w-72 flex-shrink-0">
+                    <div className="p-5 rounded-2xl bg-primary/5 border border-primary/10">
+                      <div className="flex items-center gap-2 mb-4">
+                        <TrendingUp className="text-primary" size={18} />
+                        <span className="text-sm font-semibold text-primary">Impact & Results</span>
+                      </div>
+                      <ul className="space-y-3">
+                        {project.impact.map((item, i) => (
+                          <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                            <span className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -109,16 +137,16 @@ const Portfolio = () => {
         </div>
 
         {/* Stats Bar */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {[
             { value: '10+', label: 'Projects Delivered' },
-            { value: '4+', label: 'Years Experience' },
-            { value: '5+', label: 'ERP Systems' },
+            { value: '4+', label: 'Years in Production' },
+            { value: '5+', label: 'ERP Systems Built' },
             { value: '100%', label: 'Client Satisfaction' },
           ].map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-2xl bg-card border border-border/50"
+              className="text-center p-6 sm:p-8 rounded-2xl bg-card border border-border/30"
             >
               <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">{stat.value}</div>
               <div className="text-sm text-muted-foreground">{stat.label}</div>

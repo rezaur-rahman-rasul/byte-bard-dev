@@ -1,95 +1,90 @@
-import { ArrowRight, Download, Github, Linkedin, Mail, Code } from 'lucide-react';
+import { ArrowRight, Download, Github, Linkedin, Mail, Code, Sparkles } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen relative flex items-center pt-20">
+    <section id="home" className="min-h-screen relative flex items-center pt-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 hero-glow opacity-50" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
+      <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[100px]" />
+      
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: 'linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)',
+        backgroundSize: '60px 60px'
+      }} />
       
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Content */}
           <div className="order-2 lg:order-1 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
-              <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-sm text-primary font-medium">Available for opportunities</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8">
+              <Sparkles className="w-4 h-4 text-primary" />
+              <span className="text-sm text-primary font-medium">Open to new opportunities</span>
             </div>
             
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-              Hello! I'm{' '}
-              <span className="text-gradient">Reza</span>
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6">
+              I build{' '}
+              <span className="text-gradient">enterprise</span>
+              <br />
+              systems that{' '}
+              <span className="text-gradient-accent">scale.</span>
             </h1>
             
-            <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6 font-mono">
-              Full Stack Java Developer
-            </h2>
-            
-            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
-              Specializing in scalable enterprise applications with{' '}
-              <span className="text-foreground font-medium">Angular</span>,{' '}
-              <span className="text-foreground font-medium">Spring Boot</span>,{' '}
-              <span className="text-foreground font-medium">Microservices</span>, and{' '}
-              <span className="text-foreground font-medium">PostgreSQL</span>.
-              Passionate about writing clean, efficient code and solving complex technical challenges.
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0">
+              <span className="text-foreground font-semibold">Md. Rezaur Rahman Rasul</span> — Full Stack Java Developer with 4+ years 
+              of crafting production-grade ERP systems, microservices architectures, and enterprise solutions 
+              that power real businesses.
+            </p>
+
+            <p className="text-muted-foreground text-sm sm:text-base leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+              From furniture production to animal feed manufacturing — I've built systems that manage 
+              <span className="text-primary font-medium"> millions in transactions</span>, streamline complex workflows, 
+              and deliver measurable business impact.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-8">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4 mb-10">
               <a href="#portfolio" className="btn-primary text-sm sm:text-base">
-                View Portfolio
+                See My Work
                 <ArrowRight size={18} />
               </a>
               <a href="#contact" className="btn-outline text-sm sm:text-base">
-                Contact Me
+                Let's Talk
                 <Mail size={18} />
               </a>
               <a
-                href="/Rezaur_Rahman_Resume_Updated.pdf"
+                href="/Rezaur_Rahaman_Java_Developer.pdf"
                 download
                 className="btn-outline text-sm sm:text-base"
               >
-                Download Resume
+                Resume
                 <Download size={18} />
               </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center justify-center lg:justify-start gap-4">
-              <span className="text-sm text-muted-foreground">Find me on</span>
+              <span className="text-sm text-muted-foreground">Connect →</span>
               <div className="flex gap-3">
-                <a
-                  href="https://linkedin.com/in/md-rezaur-rahman-rasul"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Linkedin size={18} />
-                </a>
-                <a
-                  href="https://github.com/rezaur-rahman-rasul"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Github size={18} />
-                </a>
-                <a
-                  href="mailto:md.rezaur.rahman.rasul@gmail.com"
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Mail size={18} />
-                </a>
-                <a
-                  href="https://leetcode.com/u/russellruosuull/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 transition-all duration-300"
-                >
-                  <Code size={18} />
-                </a>
+                {[
+                  { href: 'https://linkedin.com/in/md-rezaur-rahman-rasul', icon: Linkedin, label: 'LinkedIn' },
+                  { href: 'https://github.com/rezaur-rahman-rasul', icon: Github, label: 'GitHub' },
+                  { href: 'mailto:md.rezaur.rahman.rasul@gmail.com', icon: Mail, label: 'Email' },
+                  { href: 'https://leetcode.com/u/russellruosuull/', icon: Code, label: 'LeetCode' },
+                ].map(({ href, icon: Icon, label }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target={href.startsWith('mailto') ? undefined : '_blank'}
+                    rel={href.startsWith('mailto') ? undefined : 'noopener noreferrer'}
+                    className="w-10 h-10 rounded-xl bg-secondary/80 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-primary/10 hover:scale-110 transition-all duration-300"
+                    aria-label={label}
+                  >
+                    <Icon size={18} />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
@@ -98,37 +93,37 @@ const Hero = () => {
           <div className="order-1 lg:order-2 flex justify-center lg:justify-end">
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-full blur-3xl scale-125" />
               
               {/* Image container */}
-              <div className="relative w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary/30 glow-effect">
+              <div className="relative w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary/20 glow-effect">
                 <img
                   src={profilePhoto}
-                  alt="Md. Rezaur Rahman Rasul"
+                  alt="Md. Rezaur Rahman Rasul - Full Stack Java Developer"
                   className="w-full h-full object-cover object-[center_50%]"
                 />
               </div>
 
               {/* Floating badges */}
-              <div className="absolute right-0 sm:-right-4 top-1/4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float">
-                <span className="text-xs sm:text-sm font-mono text-primary">4+ Years</span>
+              <div className="absolute right-0 sm:-right-6 top-1/4 px-4 py-2.5 rounded-xl glass-card shadow-lg animate-float">
+                <span className="text-xs sm:text-sm font-mono text-primary font-semibold">10+ Projects</span>
               </div>
-              <div className="absolute left-0 sm:-left-4 bottom-1/4 px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-card border border-border/50 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-                <span className="text-xs sm:text-sm font-mono text-accent">Java Expert</span>
+              <div className="absolute left-0 sm:-left-6 bottom-1/4 px-4 py-2.5 rounded-xl glass-card shadow-lg animate-float" style={{ animationDelay: '1s' }}>
+                <span className="text-xs sm:text-sm font-mono text-accent font-semibold">ERP Expert</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scrolling Tech Stack */}
-        <div className="mt-10 sm:mt-16 pt-6 sm:pt-8 border-t border-border/50">
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-8 overflow-x-auto scrollbar-hide">
-            <span className="text-sm text-muted-foreground whitespace-nowrap">Tech Stack:</span>
-            <div className="flex gap-3 sm:gap-6 animate-pulse-slow overflow-x-auto scrollbar-hide pb-2 sm:pb-0">
+        {/* Tech Stack */}
+        <div className="mt-12 sm:mt-20 pt-8 border-t border-border/30">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+            <span className="text-xs text-muted-foreground uppercase tracking-widest whitespace-nowrap font-mono">Core Stack</span>
+            <div className="flex gap-3 sm:gap-4 overflow-x-auto scrollbar-hide pb-2 sm:pb-0">
               {['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Microservices', 'Microfrontend', 'REST APIs', 'Docker'].map((tech) => (
                 <span
                   key={tech}
-                  className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-lg bg-secondary/50 border border-border/50 text-xs sm:text-sm font-medium text-muted-foreground whitespace-nowrap"
+                  className="px-4 py-2 rounded-xl bg-secondary/40 border border-border/30 text-xs sm:text-sm font-medium text-muted-foreground whitespace-nowrap hover:text-primary hover:border-primary/30 transition-all duration-300"
                 >
                   {tech}
                 </span>
