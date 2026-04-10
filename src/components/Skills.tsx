@@ -62,7 +62,7 @@ const Skills = () => {
     'Java', 'Spring Boot', 'Spring Framework', 'Hibernate', 'JPA',
     'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3',
     'PostgreSQL', 'MySQL', 'MongoDB', 'Redis',
-    'REST APIs', 'Microservices', 'Docker', 'Kubernetes',
+    'REST APIs', 'Microservices', 'Microfrontend', 'Docker', 'Kubernetes',
     'Git', 'Maven', 'Gradle', 'Jenkins', 'AWS',
     'Agile', 'Scrum', 'JIRA', 'System Design'
   ];
