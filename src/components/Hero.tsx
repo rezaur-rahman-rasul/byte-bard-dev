@@ -55,8 +55,8 @@ const Hero = () => {
                 <Mail size={18} />
               </a>
               <a
-                href="/Rezaur_Rahaman_Java_Developer.pdf"
-                download
+                href="/Rezaur_Rahman_Resume.pdf"
+                download="Rezaur_Rahman_Resume.pdf"
                 className="btn-outline text-sm sm:text-base"
               >
                 Resume
