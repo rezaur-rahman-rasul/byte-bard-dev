@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Database, Server, Layout, Cloud, Code2, Settings } from 'lucide-react';
+import { Database, Server, Layout } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -26,45 +26,27 @@ const Skills = () => {
     {
       icon: Server,
       title: 'Backend Development',
-      color: 'primary',
-      skills: [
-        { name: 'Java', level: 95 },
-        { name: 'Spring Boot', level: 92 },
-        { name: 'Microservices', level: 88 },
-        { name: 'REST APIs', level: 90 },
-      ],
+      skills: ['Java', 'Spring Boot', 'Microservices', 'REST APIs', 'Hibernate', 'JPA'],
     },
     {
       icon: Layout,
       title: 'Frontend Development',
-      color: 'accent',
-      skills: [
-        { name: 'Angular', level: 88 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'HTML/CSS', level: 85 },
-        { name: 'JavaScript', level: 82 },
-      ],
+      skills: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Microfrontend'],
     },
     {
       icon: Database,
       title: 'Database & DevOps',
-      color: 'primary',
-      skills: [
-        { name: 'PostgreSQL', level: 90 },
-        { name: 'MySQL', level: 85 },
-        { name: 'Git', level: 88 },
-        { name: 'Docker', level: 75 },
-      ],
+      skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Docker', 'Git'],
     },
   ];
 
   const technologies = [
-    'Java', 'Spring Boot', 'Spring Framework', 'Hibernate', 'JPA',
-    'Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3',
-    'PostgreSQL', 'MySQL', 'MongoDB', 'Redis',
-    'REST APIs', 'Microservices', 'Microfrontend', 'Docker', 'Kubernetes',
-    'Git', 'Maven', 'Gradle', 'Jenkins', 'AWS',
-    'Agile', 'Scrum', 'JIRA', 'System Design'
+    { category: 'Languages', items: ['Java', 'TypeScript', 'JavaScript'] },
+    { category: 'Frameworks', items: ['Spring Boot', 'Spring Framework', 'Angular', 'Hibernate'] },
+    { category: 'Architecture', items: ['Microservices', 'Microfrontend', 'REST APIs', 'System Design'] },
+    { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'] },
+    { category: 'DevOps & Tools', items: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Git', 'Maven', 'Gradle'] },
+    { category: 'Methodology', items: ['Agile', 'Scrum', 'JIRA'] },
   ];
 
   return (
@@ -80,54 +62,55 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Skill Categories with Progress Bars */}
+        {/* Skill Categories */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 mb-20">
           {skillCategories.map((category, catIndex) => (
             <div
               key={catIndex}
-              className="p-6 rounded-2xl bg-card border border-border/30 hover:border-primary/30 transition-all duration-500 border-glow"
+              className={`p-6 rounded-2xl bg-card border border-border/30 hover:border-primary/30 transition-all duration-500 border-glow ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+              style={{ animationDelay: `${catIndex * 150}ms` }}
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className={`w-12 h-12 rounded-xl bg-${category.color}/10 flex items-center justify-center`}>
-                  <category.icon className={`text-${category.color}`} size={24} />
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <category.icon className="text-primary" size={24} />
                 </div>
                 <h3 className="font-bold text-lg font-display">{category.title}</h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-sm font-medium">{skill.name}</span>
-                      <span className="text-sm text-muted-foreground font-mono">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar">
-                      <div
-                        className="skill-bar-fill"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : '0%',
-                          transitionDelay: `${skillIndex * 100}ms`,
-                        }}
-                      />
-                    </div>
-                  </div>
+                  <span
+                    key={skillIndex}
+                    className="px-3 py-1.5 rounded-lg bg-secondary/60 border border-border/30 text-sm font-medium text-muted-foreground"
+                  >
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Technology Tags */}
-        <div className="text-center">
-          <h3 className="text-xl font-bold mb-8 font-display">Full Technology Arsenal</h3>
-          <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-4 py-2.5 rounded-xl bg-secondary/40 border border-border/30 text-sm font-medium text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
-              >
-                {tech}
-              </span>
+        {/* Technology Arsenal - Grouped */}
+        <div>
+          <h3 className="text-xl font-bold mb-10 font-display text-center">
+            Complete <span className="text-gradient">Tech Stack</span>
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {technologies.map((group, index) => (
+              <div key={index} className="space-y-3">
+                <span className="text-xs font-mono text-primary uppercase tracking-widest">{group.category}</span>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((tech, i) => (
+                    <span
+                      key={i}
+                      className="px-3 py-2 rounded-xl bg-secondary/40 border border-border/30 text-sm font-medium text-muted-foreground hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300 cursor-default"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
