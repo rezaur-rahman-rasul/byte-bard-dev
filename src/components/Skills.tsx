@@ -26,26 +26,28 @@ const Skills = () => {
     {
       icon: Server,
       title: 'Backend Development',
-      skills: ['Java', 'Spring Boot', 'Microservices', 'REST APIs', 'Hibernate', 'JPA'],
+      skills: ['Java', 'Spring Boot', 'Spring Security', 'JWT', 'Microservices', 'REST APIs', 'Hibernate', 'JPA'],
     },
     {
       icon: Layout,
       title: 'Frontend Development',
-      skills: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Microfrontend'],
+      skills: ['Angular', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS', 'Microfrontend'],
     },
     {
       icon: Database,
       title: 'Database & DevOps',
-      skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Docker', 'Git'],
+      skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis Caching', 'Docker', 'Grafana', 'Prometheus', 'Git'],
     },
   ];
 
   const technologies = [
     { category: 'Languages', items: ['Java', 'TypeScript', 'JavaScript'] },
-    { category: 'Frameworks', items: ['Spring Boot', 'Spring Framework', 'Angular', 'Hibernate'] },
+    { category: 'Frameworks', items: ['Spring Boot', 'Spring Framework', 'Spring Security', 'Angular', 'Hibernate', 'JPA'] },
+    { category: 'Security', items: ['Spring Security', 'JWT', 'OAuth2'] },
     { category: 'Architecture', items: ['Microservices', 'Microfrontend', 'REST APIs', 'System Design'] },
-    { category: 'Databases', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis'] },
-    { category: 'DevOps & Tools', items: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Git', 'Maven', 'Gradle'] },
+    { category: 'Databases & Caching', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis Caching'] },
+    { category: 'DevOps & Monitoring', items: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Git', 'Grafana', 'Prometheus'] },
+    { category: 'Frontend Tools', items: ['Tailwind CSS', 'HTML5', 'CSS3', 'Maven', 'Gradle'] },
     { category: 'Methodology', items: ['Agile', 'Scrum', 'JIRA'] },
   ];
 
