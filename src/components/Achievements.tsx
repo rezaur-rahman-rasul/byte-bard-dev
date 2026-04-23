@@ -12,6 +12,14 @@ const Achievements = () => {
       images: ['/achievements/walton-vat-thanks-letter.png'],
     },
     {
+      title: 'Best Performance Award — 1st Half of 2023',
+      issuer: 'Progeny Technologies Ltd.',
+      date: 'July 2023',
+      description:
+        'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
+      images: ['/achievements/progeny-best-performance-2023.png'],
+    },
+    {
       title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
       issuer: 'IsDB-BISEW',
       date: 'December 2022',
@@ -21,14 +29,6 @@ const Achievements = () => {
         '/achievements/isdb-bisew-diploma-j2ee.jpeg',
         '/achievements/isdb-bisew-diploma-j2ee-details.jpeg',
       ],
-    },
-    {
-      title: 'Best Performance Award — 1st Half of 2023',
-      issuer: 'Progeny Technologies Ltd.',
-      date: 'July 2023',
-      description:
-        'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
-      images: ['/achievements/progeny-best-performance-2023.png'],
     },
   ];
 
