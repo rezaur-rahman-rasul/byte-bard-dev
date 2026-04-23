@@ -3,11 +3,12 @@ import { Award, FileText, ExternalLink } from 'lucide-react';
 const Achievements = () => {
   const achievements = [
     {
-      title: 'Oracle Certified Java SE 11 Developer',
-      issuer: 'Oracle',
-      date: '2023',
-      description: 'Professional certification demonstrating expertise in Java SE 11 programming.',
-      pdfUrl: '/achievements/oracle-java-cert.pdf',
+      title: 'Thanks Letter & Financial Reward — VAT Software Deployment',
+      issuer: 'Walton Digitech Industries Ltd.',
+      date: 'March 2025',
+      description:
+        'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
+      pdfUrl: '/achievements/walton-vat-thanks-letter.png',
     },
     {
       title: 'Spring Professional Certification',
