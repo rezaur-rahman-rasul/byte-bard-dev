@@ -13,7 +13,7 @@ const Achievements = () => {
     },
     {
       title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
-      issuer: 'IsDB-BISEW (IT Scholarship Programme)',
+      issuer: 'IsDB-BISEW',
       date: 'December 2022',
       description:
         '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
