@@ -21,7 +21,7 @@ const SignatureLogo = () => {
   return (
     <a href="#home" className="block relative">
       <span
-        className="text-xl md:text-2xl text-gradient font-bold whitespace-nowrap"
+        className="text-xl md:text-2xl font-bold whitespace-nowrap"
         style={{
           fontFamily: "'Dancing Script', 'Georgia', cursive",
           letterSpacing: '0.02em',
@@ -35,6 +35,11 @@ const SignatureLogo = () => {
               display: 'inline-block',
               transition: 'opacity 0.3s ease, transform 0.3s ease',
               transform: i < visibleCount ? 'translateY(0)' : 'translateY(8px)',
+              backgroundImage: 'var(--gradient-primary)',
+              WebkitBackgroundClip: 'text',
+              backgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              color: 'transparent',
             }}
           >
             {char === ' ' ? '\u00A0' : char}
