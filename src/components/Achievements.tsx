@@ -11,18 +11,12 @@ const Achievements = () => {
       pdfUrl: '/achievements/walton-vat-thanks-letter.png',
     },
     {
-      title: 'Spring Professional Certification',
-      issuer: 'VMware',
-      date: '2022',
-      description: 'Certified Spring Framework professional with deep knowledge of Spring Boot and microservices.',
-      pdfUrl: '/achievements/spring-cert.pdf',
-    },
-    {
-      title: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      description: 'Expertise in designing distributed systems and deploying applications on AWS cloud infrastructure.',
-      pdfUrl: '/achievements/aws-cert.pdf',
+      title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
+      issuer: 'IsDB-BISEW (IT Scholarship Programme)',
+      date: 'December 2022',
+      description:
+        '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
+      pdfUrl: '/achievements/isdb-bisew-diploma-j2ee.jpeg',
     },
   ];
 
