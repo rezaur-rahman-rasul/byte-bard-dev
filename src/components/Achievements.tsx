@@ -1,4 +1,5 @@
-import { Award, FileText, ExternalLink } from 'lucide-react';
+import { useState } from 'react';
+import { Award, FileText, ExternalLink, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Achievements = () => {
   const achievements = [
@@ -8,7 +9,7 @@ const Achievements = () => {
       date: 'March 2025',
       description:
         'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
-      pdfUrl: '/achievements/walton-vat-thanks-letter.png',
+      images: ['/achievements/walton-vat-thanks-letter.png'],
     },
     {
       title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
@@ -16,13 +17,23 @@ const Achievements = () => {
       date: 'December 2022',
       description:
         '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
-      pdfUrl: '/achievements/isdb-bisew-diploma-j2ee.jpeg',
+      images: [
+        '/achievements/isdb-bisew-diploma-j2ee.jpeg',
+        '/achievements/isdb-bisew-diploma-j2ee-details.jpeg',
+      ],
     },
   ];
 
-  const handleOpenPdf = (pdfUrl: string) => {
-    window.open(pdfUrl, '_blank', 'noopener,noreferrer');
-  };
+  const [viewer, setViewer] = useState<{ images: string[]; index: number } | null>(null);
+
+  const openViewer = (images: string[]) => setViewer({ images, index: 0 });
+  const closeViewer = () => setViewer(null);
+  const next = () =>
+    setViewer((v) => (v ? { ...v, index: (v.index + 1) % v.images.length } : v));
+  const prev = () =>
+    setViewer((v) =>
+      v ? { ...v, index: (v.index - 1 + v.images.length) % v.images.length } : v,
+    );
 
   return (
     <section id="achievements" className="py-24 relative">
@@ -43,7 +54,7 @@ const Achievements = () => {
           {achievements.map((achievement, index) => (
             <div
               key={index}
-              onClick={() => handleOpenPdf(achievement.pdfUrl)}
+              onClick={() => openViewer(achievement.images)}
               className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
@@ -65,16 +76,74 @@ const Achievements = () => {
 
               <div className="flex items-center gap-2 text-sm text-primary font-medium group-hover:gap-3 transition-all">
                 <FileText size={16} />
-                <span>View Certificate</span>
+                <span>
+                  View Certificate{achievement.images.length > 1 ? `s (${achievement.images.length})` : ''}
+                </span>
               </div>
             </div>
           ))}
         </div>
 
         <p className="text-center text-xs text-muted-foreground mt-8">
-          Click on any achievement to view the certificate PDF
+          Click on any achievement to view the certificate
         </p>
       </div>
+
+      {viewer && (
+        <div
+          className="fixed inset-0 z-50 bg-background/90 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={closeViewer}
+        >
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              closeViewer();
+            }}
+            className="absolute top-4 right-4 p-2 rounded-full bg-card border border-border/50 hover:border-primary/40 transition-colors"
+            aria-label="Close"
+          >
+            <X size={20} />
+          </button>
+
+          {viewer.images.length > 1 && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  prev();
+                }}
+                className="absolute left-4 p-2 rounded-full bg-card border border-border/50 hover:border-primary/40 transition-colors"
+                aria-label="Previous"
+              >
+                <ChevronLeft size={20} />
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  next();
+                }}
+                className="absolute right-4 p-2 rounded-full bg-card border border-border/50 hover:border-primary/40 transition-colors"
+                aria-label="Next"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </>
+          )}
+
+          <img
+            src={viewer.images[viewer.index]}
+            alt="Certificate"
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[90vh] max-w-[90vw] object-contain rounded-lg shadow-2xl"
+          />
+
+          {viewer.images.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-card border border-border/50 text-xs text-muted-foreground">
+              {viewer.index + 1} / {viewer.images.length}
+            </div>
+          )}
+        </div>
+      )}
     </section>
   );
 };
