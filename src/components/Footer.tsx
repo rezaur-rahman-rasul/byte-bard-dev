@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex flex-col items-center md:items-start gap-2">
             <span className="text-xl font-bold text-gradient">Md. Rezaur Rahman Rasul</span>
-           <p className="text-sm text-muted-foreground tracking-wide">
+           <p className="text-sm text-muted-foreground tracking-wider">
           Full Stack Java Developer
            </p>
           </div>
