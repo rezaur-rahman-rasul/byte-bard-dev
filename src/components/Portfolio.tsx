@@ -3,6 +3,15 @@ import { ArrowUpRight, TrendingUp, Layers } from 'lucide-react';
 const Portfolio = () => {
   const projects = [
     {
+      title: 'ERP System — Walton Group',
+      category: 'Enterprise ERP',
+      problem: 'Walton Group required a modular, enterprise-scale ERP capable of supporting multiple business units and evolving independently across departments — without monolithic bottlenecks or downtime during releases.',
+      solution: 'Architected and built a distributed ERP platform for Walton Group using Spring Boot microservices, an API Gateway, service discovery, centralized authentication, and event-driven communication — paired with a microfrontend Angular shell for independent UI deployments.',
+      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Angular', 'Microfrontend', 'PostgreSQL', 'Docker', 'REST API'],
+      impact: ['Independent service deployments with zero downtime', 'Horizontally scalable modules per business domain', 'Centralized auth & API gateway across all services', 'Microfrontend shell enabling parallel team delivery'],
+      featured: true,
+    },
+    {
       title: 'VAT Management System',
       category: 'Financial Software',
       problem: 'Businesses faced compliance risks due to manual VAT calculations and fragmented reporting across departments.',
@@ -47,18 +56,9 @@ const Portfolio = () => {
       title: 'ERP System — Animal Feed',
       category: 'Enterprise ERP',
       problem: 'An animal feed manufacturer needed end-to-end visibility into batch production, quality control, and sales operations.',
-      solution: 'Developed a microservices-based ERP handling batch management, automated quality checks, and integrated sales analytics.',
-      technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'Microservices'],
+      solution: 'Developed an ERP handling batch management, automated quality checks, and integrated sales analytics.',
+      technologies: ['Java', 'Spring Boot', 'Angular', 'PostgreSQL', 'REST API'],
       impact: ['Automated batch tracking & quality control workflows', 'Integrated sales & production analytics', 'Scalable architecture supporting business growth'],
-      featured: true,
-    },
-    {
-      title: 'ERP System — Walton Group',
-      category: 'Enterprise ERP',
-      problem: 'Walton Group required a modular, enterprise-scale ERP capable of supporting multiple business units and evolving independently across departments — without monolithic bottlenecks or downtime during releases.',
-      solution: 'Architected and built a distributed ERP platform for Walton Group using Spring Boot microservices, an API Gateway, service discovery, centralized authentication, and event-driven communication — paired with a microfrontend Angular shell for independent UI deployments.',
-      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Angular', 'Microfrontend', 'PostgreSQL', 'Docker', 'REST API'],
-      impact: ['Independent service deployments with zero downtime', 'Horizontally scalable modules per business domain', 'Centralized auth & API gateway across all services', 'Microfrontend shell enabling parallel team delivery'],
       featured: true,
     },
   ];
