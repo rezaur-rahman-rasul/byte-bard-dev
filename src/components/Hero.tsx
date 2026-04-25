@@ -1,6 +1,4 @@
 import { ArrowRight, Download, Github, Linkedin, Mail, Code, Sparkles } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
-
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen relative flex items-center pt-20 overflow-hidden">
@@ -98,7 +96,7 @@ const Hero = () => {
               {/* Image container */}
               <div className="relative w-52 h-52 sm:w-72 sm:h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-2 border-primary/20 glow-effect">
                 <img
-                  src={profilePhoto}
+                  src="/profile-photo.jpg"
                   alt="Md. Rezaur Rahman Rasul - Full Stack Java Developer"
                   className="w-full h-full object-cover object-[center_50%]"
                   loading="eager"
