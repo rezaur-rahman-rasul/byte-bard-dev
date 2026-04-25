@@ -53,10 +53,10 @@ const Portfolio = () => {
       featured: true,
     },
     {
-      title: 'ERP System — Microservices Architecture',
+      title: 'ERP System — Walton Group',
       category: 'Enterprise ERP',
-      problem: 'A growing enterprise needed a modular, scalable ERP that could evolve independently across departments without monolithic bottlenecks or downtime during releases.',
-      solution: 'Architected and built a distributed ERP platform using Spring Boot microservices, an API Gateway, service discovery, centralized authentication, and event-driven communication — paired with a microfrontend Angular shell for independent UI deployments.',
+      problem: 'Walton Group required a modular, enterprise-scale ERP capable of supporting multiple business units and evolving independently across departments — without monolithic bottlenecks or downtime during releases.',
+      solution: 'Architected and built a distributed ERP platform for Walton Group using Spring Boot microservices, an API Gateway, service discovery, centralized authentication, and event-driven communication — paired with a microfrontend Angular shell for independent UI deployments.',
       technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Angular', 'Microfrontend', 'PostgreSQL', 'Docker', 'REST API'],
       impact: ['Independent service deployments with zero downtime', 'Horizontally scalable modules per business domain', 'Centralized auth & API gateway across all services', 'Microfrontend shell enabling parallel team delivery'],
       featured: true,
