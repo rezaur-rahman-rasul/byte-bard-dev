@@ -7,7 +7,7 @@ const Portfolio = () => {
       category: 'Enterprise ERP',
       problem: 'Walton Group required a modular, enterprise-scale ERP capable of supporting multiple business units and evolving independently across departments — without monolithic bottlenecks or downtime during releases.',
       solution: 'Architected and built a distributed ERP platform for Walton Group using Spring Boot microservices, an API Gateway, service discovery, centralized authentication, and event-driven communication — paired with a microfrontend Angular shell for independent UI deployments.',
-      technologies: ['Java', 'Spring Boot', 'Spring Cloud', 'Spring Security', 'Angular', 'Microfrontend', 'PostgreSQL', 'Docker', 'REST API'],
+      technologies: ['Spring Boot', 'JWT', 'Flyway', 'Redis', 'Kafka', 'Docker', 'Spring Cloud', 'Angular', 'Microfrontend', 'PostgreSQL'],
       impact: ['Independent service deployments with zero downtime', 'Horizontally scalable modules per business domain', 'Centralized auth & API gateway across all services', 'Microfrontend shell enabling parallel team delivery'],
       featured: true,
     },
