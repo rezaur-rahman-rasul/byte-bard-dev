@@ -101,6 +101,9 @@ const Hero = () => {
                   src={profilePhoto}
                   alt="Md. Rezaur Rahman Rasul - Full Stack Java Developer"
                   className="w-full h-full object-cover object-[center_50%]"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                 />
               </div>
 
