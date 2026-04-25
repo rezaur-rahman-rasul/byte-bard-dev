@@ -45,7 +45,7 @@ const Skills = () => {
     { category: 'Frameworks', items: ['Spring Boot', 'Spring Framework', 'Spring Security', 'Angular', 'Hibernate', 'JPA'] },
     { category: 'Security', items: ['Spring Security', 'JWT', 'OAuth2'] },
     { category: 'Architecture', items: ['Microservices', 'Microfrontend', 'REST APIs', 'System Design'] },
-    { category: 'Databases & Caching', items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis Caching'] },
+    { category: 'Databases & Caching', items: ['PostgreSQL', 'MongoDB', 'Redis Caching'] },
     { category: 'DevOps & Monitoring', items: ['Docker', 'Kubernetes', 'Jenkins', 'AWS', 'Git', 'Grafana', 'Prometheus'] },
     { category: 'Frontend Tools', items: ['Tailwind CSS', 'HTML5', 'CSS3', 'Maven', 'Gradle'] },
     { category: 'Methodology', items: ['Agile', 'Scrum', 'JIRA'] },
