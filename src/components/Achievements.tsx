@@ -40,7 +40,10 @@ const preloadCertificates = () => {
 
     const img = new Image();
     img.decoding = 'async';
+    img.loading = 'eager';
+    img.fetchPriority = 'high';
     img.src = src;
+    img.decode().catch(() => undefined);
     preloadCache.set(src, img);
   });
 };
