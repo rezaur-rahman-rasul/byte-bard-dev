@@ -9,7 +9,7 @@ const Achievements = () => {
       date: 'October 2024',
       description:
         'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
-      images: ['/achievements/walton-vat-thanks-letter.png'],
+      images: ['/achievements/walton-vat-thanks-letter.jpg'],
     },
     {
       title: 'Best Performance Award — 1st Half of 2023',
@@ -17,7 +17,7 @@ const Achievements = () => {
       date: 'July 2023',
       description:
         'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
-      images: ['/achievements/progeny-best-performance-2023.png'],
+      images: ['/achievements/progeny-best-performance-2023.jpg'],
     },
     {
       title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
@@ -63,6 +63,7 @@ const Achievements = () => {
             <div
               key={index}
               onClick={() => openViewer(achievement.images)}
+              onMouseEnter={() => achievement.images.forEach((src) => { const i = new Image(); i.src = src; })}
               className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
