@@ -8,7 +8,7 @@ const achievements = [
     date: 'October 2024',
     description:
       'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
-    images: ['/achievements/walton-vat-thanks-letter.jpg'],
+    images: ['/achievements/walton-vat-thanks-letter.webp'],
   },
   {
     title: 'Best Performance Award — 1st Half of 2023',
@@ -16,7 +16,7 @@ const achievements = [
     date: 'July 2023',
     description:
       'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
-    images: ['/achievements/progeny-best-performance-2023.jpg'],
+    images: ['/achievements/progeny-best-performance-2023.webp'],
   },
   {
     title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
@@ -25,8 +25,8 @@ const achievements = [
     description:
       '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
     images: [
-      '/achievements/isdb-bisew-diploma-j2ee.jpeg',
-      '/achievements/isdb-bisew-diploma-j2ee-details.jpeg',
+      '/achievements/isdb-bisew-diploma-j2ee.webp',
+      '/achievements/isdb-bisew-diploma-j2ee-details.webp',
     ],
   },
 ];
