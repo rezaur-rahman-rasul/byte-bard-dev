@@ -1,38 +1,59 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Award, FileText, ExternalLink, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Achievements = () => {
-  const achievements = [
-    {
-      title: 'Thanks Letter & Financial Reward — VAT Software Deployment',
-      issuer: 'Walton Digitech Industries Ltd.',
-      date: 'October 2024',
-      description:
-        'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
-      images: ['/achievements/walton-vat-thanks-letter.jpg'],
-    },
-    {
-      title: 'Best Performance Award — 1st Half of 2023',
-      issuer: 'Progeny Technologies Ltd.',
-      date: 'July 2023',
-      description:
-        'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
-      images: ['/achievements/progeny-best-performance-2023.jpg'],
-    },
-    {
-      title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
-      issuer: 'IsDB-BISEW',
-      date: 'December 2022',
-      description:
-        '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
-      images: [
-        '/achievements/isdb-bisew-diploma-j2ee.jpeg',
-        '/achievements/isdb-bisew-diploma-j2ee-details.jpeg',
-      ],
-    },
-  ];
+const achievements = [
+  {
+    title: 'Thanks Letter & Financial Reward — VAT Software Deployment',
+    issuer: 'Walton Digitech Industries Ltd.',
+    date: 'October 2024',
+    description:
+      'Formal recognition and financial reward for successful full-stack deployment of the Pai Pai VAT software system — backend, frontend, reports and data migration.',
+    images: ['/achievements/walton-vat-thanks-letter.webp'],
+  },
+  {
+    title: 'Best Performance Award — 1st Half of 2023',
+    issuer: 'Progeny Technologies Ltd.',
+    date: 'July 2023',
+    description:
+      'Awarded 1st Prize for outstanding performance and dedication in the 1st Half of the Year 2023 by the management of Progeny Technologies Ltd.',
+    images: ['/achievements/progeny-best-performance-2023.webp'],
+  },
+  {
+    title: 'Diploma in Enterprise Systems Analysis & Design with J2EE',
+    issuer: 'IsDB-BISEW',
+    date: 'December 2022',
+    description:
+      '1060-hour professional diploma course (Round-46) covering Java, J2EE, Spring, Hibernate, Oracle, UML, Servlets/JSP, Angular and Android — completed under the IsDB-BISEW IT Scholarship Programme.',
+    images: [
+      '/achievements/isdb-bisew-diploma-j2ee.webp',
+      '/achievements/isdb-bisew-diploma-j2ee-details.webp',
+    ],
+  },
+];
 
+const certificateImages = Array.from(new Set(achievements.flatMap((achievement) => achievement.images)));
+const preloadCache = new Map<string, HTMLImageElement>();
+
+const preloadCertificates = () => {
+  certificateImages.forEach((src) => {
+    if (preloadCache.has(src)) return;
+
+    const img = new Image();
+    img.decoding = 'async';
+    img.loading = 'eager';
+    img.fetchPriority = 'high';
+    img.src = src;
+    img.decode().catch(() => undefined);
+    preloadCache.set(src, img);
+  });
+};
+
+const Achievements = () => {
   const [viewer, setViewer] = useState<{ images: string[]; index: number } | null>(null);
+
+  useEffect(() => {
+    preloadCertificates();
+  }, []);
 
   const openViewer = (images: string[]) => setViewer({ images, index: 0 });
   const closeViewer = () => setViewer(null);
@@ -63,7 +84,8 @@ const Achievements = () => {
             <div
               key={index}
               onClick={() => openViewer(achievement.images)}
-              onMouseEnter={() => achievement.images.forEach((src) => { const i = new Image(); i.src = src; })}
+              onMouseEnter={preloadCertificates}
+              onFocus={preloadCertificates}
               className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
             >
               <div className="flex items-start justify-between mb-4">
